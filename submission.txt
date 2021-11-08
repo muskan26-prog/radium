@@ -1,0 +1,165 @@
+Problem 1:
+-Create a folder called 'assignment'
+-Inside 'assignment'create 2 folders 'source' and 'destination'
+-Inside 'source' create a text file using a command(not manually)
+-Add content in the text file
+-Copy the contents of 'source' folder in 'destination' using cp command 
+- END RESULT : both the folder 'source' and 'destination dhould have the same file  
+.............................................................................................
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands
+$ pwd
+/c/Users/muska/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands
+$ mkdir assignment
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands
+$ cd assignment
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment
+$ mkdir source
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment
+$ mkdir destination
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment
+$ ls
+destination/  source/
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment
+$ cd source
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/source
+$ touch dummy.txt
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/source
+$ cat >dummy.txt
+Hi all, You're in dummy.txt!!!!!!!!!
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/source
+$ cat dummy.txt
+Hi all, You're in dummy.txt!!!!!!!!!!
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/source
+$ cd ..
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment
+$ cp -r source/dummy.txt destination
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment
+$ cd destination
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/destination
+$ ls
+dummy.txt
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/destination
+$ cat dummy.txt
+Hi all, You're in dummy.txt!!!!!!!!!
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/destination
+$ cd ..
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment
+$ cd source
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/source
+$ ls
+dummy.txt
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/source
+$ cat dummy.txt
+Hi all, You're in dummy.txt!!!!!!!!!
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Problem 2: 
+-Remove the above file from 'destinaton' folder
+-Move the file from 'source' to 'destination'
+
+END RESULT : Only 'destination' folder should have the file
+....................................................................
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment
+$ cd destination
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/destination
+$ rm dummy.txt
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/destination
+$ ls
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/destination
+$ cd ..
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment
+$ mv source/dummy.txt destination
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment
+$ cd destination
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/destination
+$ ls
+dummy.txt
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/destination
+$ cd ..
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment
+$ cd source
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/source
+$ ls
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/source
+$
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Problem 3 :
+- Edit the above file in 'destination' folder and add a lot of line of text with 'functionUp' mentioned in a few lines
+- Use the grep command to find all the lines containing the key word 'functionUp'
+
+...........................................................................................................................
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment
+$ cd destination
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/destination
+$ cat >dummy.txt
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . i joined bootcamp at on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . i joined bootcamp at on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . i joined bootcamp at on 18th October
+Hi everyone I'm Muskan Sayyad . i joined bootcamp at on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/destination
+$ cat dummy.txt
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . i joined bootcamp at on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . i joined bootcamp at on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . i joined bootcamp at on 18th October
+Hi everyone I'm Muskan Sayyad . i joined bootcamp at on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+
+muska@LAPTOP-4F2644KF MINGW64 ~/OneDrive/Desktop/Bootcamp/functionUp/Terminalcommands/assignment/destination
+$ grep -i "functionUp" dummy.txt
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
+Hi everyone I'm Muskan Sayyad . I joined bootcamp at functionUp  on 18th October
