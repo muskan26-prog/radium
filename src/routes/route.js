@@ -25,7 +25,9 @@ router.post('/createNewBook', NewBookController.createNewBook );
 router.get('/getAllNewBooks', NewBookController.getNewBooksData);
 
 router.post('/createAuthor', AuthorController.createAuthor );
-router.get('/getBooks', AuthorController.getAuthorsData);
+router.get('/getBooks', AuthorController.getBooks);
+router.get('/getTwoState', AuthorController.twoState);
+router.get('/getPriceBook',AuthorController.priceBook);
 
 router.post('/createnBook', NBookController.createBook);
 router.get('/bookList', NBookController.getBooksList);
