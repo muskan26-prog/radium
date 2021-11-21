@@ -5,6 +5,10 @@ const BookModel= require("../models/bookModel")
 
 const UserController= require("../controllers/userController")
 const BookController = require("../controllers/bookController")
+const NewBookController = require("../controllers/newBookController")
+const AuthorController = require("../controllers/authorController")
+const NBookController = require("../controllers/nBookController");
+const nBookModel = require('../models/nBookModel');
 
 
 router.get('/test-me', function (req, res) {
@@ -17,5 +21,16 @@ router.get('/getAllUsers',  UserController.getUsersData  );
 router.post('/createBook', BookController.createBook );
 router.get('/getAllBooks', BookController.getBooksData);
 
+router.post('/createNewBook', NewBookController.createNewBook );
+router.get('/getAllNewBooks', NewBookController.getNewBooksData);
+
+router.post('/createAuthor', AuthorController.createAuthor );
+router.get('/getBooks', AuthorController.getAuthorsData);
+
+router.post('/createnBook', NBookController.createBook);
+router.get('/bookList', NBookController.getBooksList);
+router.post('/getParticularBook', NBookController.getParticularBook);
+router.get('/getXINRBooks', NBookController.getXINRBooks);
+router.get('/getRandomBooks', NBookController.getRandomBooks);
 
 module.exports = router;
