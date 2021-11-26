@@ -1,8 +1,5 @@
 const axios = require("axios");
-
-
 // Mental Notes for the assignment
-
 // // incorrect 
 // arr.foreach( ele=> {
 
@@ -15,9 +12,6 @@ const axios = require("axios");
 //   { city: delhi, temp: 20},
 //   { city: bombay, temp: 14},
 // ]
-
-
-
 
 // arr1= []
 // for ( ) loop over the array
@@ -35,14 +29,6 @@ const axios = require("axios");
 //   { city: bombay, temp: 14},
 //   { city: rome, temp: 12}
 // ]
-
-
-
-
-
-
-
-
 const getWeather = async function (req, res) { 
   try {
 
@@ -73,7 +59,5 @@ const getWeather = async function (req, res) {
       res.status(500).send({status: false, msg: "server error"})
   }
 }
-
-
 
 module.exports.getWeather = getWeather;
