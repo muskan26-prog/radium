@@ -16,7 +16,7 @@ const isValidRequestBody = function (requestBody) {
 //let interests = [];
 //let aaa ;
 
-// creating college
+// creating Intern
 
 const createIntern = async function (req, res) {
     try {
@@ -83,11 +83,11 @@ const createIntern = async function (req, res) {
         //validation ends
          let nm = req.body.collegeName;
          //console.log(nm)
-        const collegeData = await CollegeModel.findOne({name: nm })
+        const collegeData = await CollegeModel.findOne({name: nm , isDeleted : false})
         //console.log(collegeData)
 
         if(!collegeData){
-            res.status(400).send({status: false, message: ` not a valid college name`})
+            res.status(400).send({status: false, message: ` not a valid college name or the college is not active at present `})
         }
 
    
@@ -119,7 +119,7 @@ const getCollegeDetails = async function (req, res){
         //     res.status(400).send({ status: false, message: 'Invalid request parameters.  query not passed' })
         //     return
         // }
-        let collegeDetail = await CollegeModel.findOne({name: collegeAbb})//.select({name: 1, fullName: 1, logoLink: 1})
+        let collegeDetail = await CollegeModel.findOne({name: collegeAbb, isDeleted: false})//.select({name: 1, fullName: 1, logoLink: 1})
         //console.log(collegeDetail)
 
         if(!isValid(collegeDetail)){
@@ -130,7 +130,7 @@ const getCollegeDetails = async function (req, res){
         clgId = collegeDetail._id;
        // console.log(clgId)
 
-         let internsData = await InternModel.find({collegeId: clgId}).select({_id: 1, name:1,email: 1, mobile: 1})
+         let internsData = await InternModel.find({collegeId: clgId, isDeleted: false}).select({_id: 1, name:1,email: 1, mobile: 1})
          if(internsData.length == 0){
             res.status(400).send({ status: false, message: ` No interns applied for this college` })
             return
