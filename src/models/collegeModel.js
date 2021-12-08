@@ -5,14 +5,15 @@ const collegeSchema = new mongoose.Schema({
         type: String,
         required: 'First name is required',
         unique: true,
+        lowercase: true,
         trim: true,
         lowercase : true
     },
     fullName: {
         type: String,
         required: 'Last name is required',
-        trim: true,
-    },
+        trim: true
+    }, 
     logoLink: {
         type: String,
         trim: true,
